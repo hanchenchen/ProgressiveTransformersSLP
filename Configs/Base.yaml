@@ -27,7 +27,7 @@ training:
     validation_freq: 10  # After how many steps to run a validation on the model
     logging_freq: 250  # After how many steps to log training progress
     eval_metric: "dtw"  # Evaluation metric during training (dtw','bt')
-    model_dir: "./Models/Base" # Where the model shall be stored
+    model_dir: "./LogDir/Demo" # Where the model shall be stored
     overwrite: False # Flag to overwrite a previous saved model in the model_dir
     continue: True  # Flag to continue from a previous saved model in the model_dir
     shuffle: True  # Flag to shuffle the data during training
