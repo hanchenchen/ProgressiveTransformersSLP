@@ -570,7 +570,7 @@ def train(cfg_file: str, ckpt=None) -> None:
 
 # pylint: disable-msg=logging-too-many-args
 def test(cfg_file,
-         ckpt: str) -> None:
+         ckpt: str =None) -> None:
 
     # Load the config file
     cfg = load_config(cfg_file)
