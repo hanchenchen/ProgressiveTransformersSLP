@@ -1,5 +1,5 @@
 data:
-    src: "text"    # Source - Either Gloss->Pose or Text->Pose (gloss,text)
+    src: "gloss"    # Source - Either Gloss->Pose or Text->Pose (gloss,text)
     trg: "skels"    # Target - 3D body co-ordinates (skels)
     files: "files"    # Filenames for each sequence
 
@@ -9,7 +9,7 @@ data:
 
     max_sent_length: 300 # Max Sentence Length
     skip_frames: 1   # Skip frames in the data, to reduce the data input size
-    src_vocab:  # "./Configs/src_vocab.txt"
+    src_vocab: "./Configs/src_vocab.txt"
 
 training:
     random_seed: 27   # Random seed for initialisation
@@ -27,7 +27,7 @@ training:
     validation_freq: 10000  # After how many steps to run a validation on the model
     logging_freq: 250  # After how many steps to log training progress
     eval_metric: "dtw"  # Evaluation metric during training (dtw','bt')
-    model_dir: "./Models/Base-T2P" # Where the model shall be stored
+    model_dir: "./Models/Base-G2P" # Where the model shall be stored
     overwrite: False # Flag to overwrite a previous saved model in the model_dir
     continue: True  # Flag to continue from a previous saved model in the model_dir
     shuffle: True  # Flag to shuffle the data during training
